@@ -10,6 +10,3 @@ ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
-
-//load the map
-var map = loadMap();

@@ -1,4 +1,5 @@
 import React from 'react';
+import loadMap from '../functions/loadMap';
 
 //import Header component
 import Header from './Header'
@@ -10,7 +11,9 @@ class App extends React.Component {
     pageHeader: 'CartoDB map'
   };
   componentDidMount() {
-    // timers, listeners
+    // timers, listeners...
+    //load the map
+    var map = loadMap();
   }
   componentWillUnmount() {
     // clean timers, listeners
