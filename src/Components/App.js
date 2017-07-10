@@ -1,5 +1,5 @@
 import React from 'react';
-import loadMap from '../functions/loadMap';
+import loadMap from '../Functions/loadMap';
 
 //import Header component
 import Header from './Header'

@@ -1,0 +1,76 @@
+{
+    "exterior_83":
+      {
+        "sql":"SELECT * FROM exterior_83",
+        "cartocss":"#layer { line-color: #fec44f; }"
+      },
+    "district_boundary_83":
+      {
+        "sql":"SELECT * FROM district_boundary_83",
+        "cartocss":"#layer { line-color: #fec44f; }"
+      },
+      "stands_Fsvegattributes":
+      {
+        "sql": "SELECT * FROM stands_fsvegattributes_20130408",
+        "cartocss":"#layer { \n
+            [stand_age >= 190] { polygon-fill: #006d2c } \n
+            [stand_age < 190] { polygon-fill: #31a354 } \n
+            [stand_age < 130] { polygon-fill: #74c476 } \n
+            [stand_age < 98] { polygon-fill: #bae4b3 } \n
+            [stand_age < 51] { polygon-fill: #edf8e9 } \n
+          }"
+      },
+    "publicroads":
+      {
+        "sql":"SELECT * FROM publicroads",
+        "cartocss":"#layer { line-width: 0.5; line-color: #969696; }"
+      },
+    "streams_83":
+      {
+        "sql":"SELECT * FROM streams_83",
+        "cartocss":"#layer { line-width: 2; line-color: #4292c6; line-opacity : 0.75; line-join : round; line-smooth : 0.5; }"
+      },
+    "hiking_trails_83":
+      {
+        "sql":"SELECT * FROM hiking_trails_83",
+        "cartocss":"#layer { line-width: 1; line-color: #00441b; line-dasharray: 5, 3; }"
+      },
+    "recreation_sites_current_83":
+      {
+        "sql":"SELECT * FROM recreation_sites_current_83",
+        "cartocss":"# layer { \n
+          [site_type = 'AMC HUT'] {marker-fill: #a6cee3} \n
+          [site_type = 'CUA DAY USE'] {marker-fill: #1f78b4} \n
+          [site_type = 'ORGANIZATION SITE'] {marker-fill: #b2df8a} \n
+          [site_type = 'ADMIN/INFO/INTERP'] {marker-fill: #33a02c} \n
+          [site_type = 'BOATING SITE'] {marker-fill: #fb9a99} \n
+          [site_type = 'CABIN'] {marker-fill: #e31a1c} \n
+          [site_type = 'TRAILHEAD'] {marker-fill: #fdbf6f} \n
+          [site_type = 'VISITOR /INFO CENTER'] {marker-fill: #ff7f00} \n
+          [site_type = 'OBSERVATION SITE'] {marker-fill: #cab2d6} \n
+          [site_type = 'INFO/INTERP'] {marker-fill: #6a3d9a} \n
+          [site_type = 'FAMILY CAMPGROUND'] {marker-fill: #ffff99} \n
+          [site_type = 'ODSERVATION SITE'] {marker-fill: #a6cee3} \n
+          [site_type = 'ALPINE SKI AREA'] {marker-fill: #1f78b4} \n
+          [site_type = 'NORDIC AREA'] {marker-fill: #b2df8a} \n
+          [site_type = 'LODGE'] {marker-fill: #33a02c} \n
+          [site_type = 'GROUP CAMPGROUND'] {marker-fill: #fb9a99} \n
+          [site_type = 'CAMPING CUA'] {marker-fill: #e31a1c} \n
+          [site_type = 'SHELTER'] {marker-fill: #fdbf6f} \n
+          [site_type = 'TENTSITE'] {marker-fill: #ff7f00} \n
+          [site_type = 'FIRE LOOKOUT'] {marker-fill: #cab2d6} \n
+          [site_type = 'INTERP MAJOR'] {marker-fill: #6a3d9a} \n
+          [site_type = 'PICNIC AREA'] {marker-fill: #ffff99} \n
+          }"
+      },
+    "peaks_4000ft":
+      {
+        "sql":"SELECT * FROM peaks_4000ft",
+        "cartocss":"#layer { marker-fill: #000; marker-width: 5; }"
+      },
+    "firestations":
+      {
+        "sql":"SELECT * FROM firestations",
+        "cartocss":"#layer { marker-fill: #fb9a99; marker-width: 5; }"
+      }
+}
