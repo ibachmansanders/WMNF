@@ -5,6 +5,11 @@ const loadLayer = (map) => {
     user_name: 'bachmansande',
     type: 'cartodb',
     sublayers: [
+
+      {
+        sql: layers.stands_fsvegattributes.sql,
+        cartocss: layers.stands_fsvegattributes.cartocss
+      },
       {
         sql: layers.exterior_83.sql,
         cartocss: layers.exterior_83.cartocss
@@ -14,8 +19,28 @@ const loadLayer = (map) => {
         cartocss: layers.district_boundary_83.cartocss
       },
       {
+        sql: layers.publicroads.sql,
+        cartocss: layers.publicroads.cartocss
+      },
+      {
+        sql: layers.streams_83.sql,
+        cartocss: layers.streams_83.cartocss
+      },
+      {
         sql: layers.hiking_trails_83.sql,
         cartocss: layers.hiking_trails_83.cartocss
+      },
+      {
+        sql: layers.firestations.sql,
+        cartocss: layers.firestations.cartocss
+      },
+      {
+        sql: layers.recreation_sites_current_83.sql,
+        cartocss: layers.recreation_sites_current_83.cartocss
+      },
+      {
+        sql: layers.peaks_4000ft.sql,
+        cartocss: layers.peaks_4000ft.cartocss
       }
     ]
   })

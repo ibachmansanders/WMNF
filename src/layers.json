@@ -9,16 +9,10 @@
         "sql":"SELECT * FROM district_boundary_83",
         "cartocss":"#layer { line-color: #fec44f; }"
       },
-      "stands_Fsvegattributes":
+    "stands_fsvegattributes":
       {
         "sql": "SELECT * FROM stands_fsvegattributes_20130408",
-        "cartocss":"#layer { \n
-            [stand_age >= 190] { polygon-fill: #006d2c } \n
-            [stand_age < 190] { polygon-fill: #31a354 } \n
-            [stand_age < 130] { polygon-fill: #74c476 } \n
-            [stand_age < 98] { polygon-fill: #bae4b3 } \n
-            [stand_age < 51] { polygon-fill: #edf8e9 } \n
-          }"
+        "cartocss":"#layer { [stand_age >= 190] { polygon-fill: #006d2c } [stand_age < 190] { polygon-fill: #31a354 } [stand_age < 130] { polygon-fill: #74c476 } [stand_age < 98] { polygon-fill: #bae4b3 } [stand_age < 51] { polygon-fill: #edf8e9 } }"
       },
     "publicroads":
       {
@@ -38,39 +32,16 @@
     "recreation_sites_current_83":
       {
         "sql":"SELECT * FROM recreation_sites_current_83",
-        "cartocss":"# layer { \n
-          [site_type = 'AMC HUT'] {marker-fill: #a6cee3} \n
-          [site_type = 'CUA DAY USE'] {marker-fill: #1f78b4} \n
-          [site_type = 'ORGANIZATION SITE'] {marker-fill: #b2df8a} \n
-          [site_type = 'ADMIN/INFO/INTERP'] {marker-fill: #33a02c} \n
-          [site_type = 'BOATING SITE'] {marker-fill: #fb9a99} \n
-          [site_type = 'CABIN'] {marker-fill: #e31a1c} \n
-          [site_type = 'TRAILHEAD'] {marker-fill: #fdbf6f} \n
-          [site_type = 'VISITOR /INFO CENTER'] {marker-fill: #ff7f00} \n
-          [site_type = 'OBSERVATION SITE'] {marker-fill: #cab2d6} \n
-          [site_type = 'INFO/INTERP'] {marker-fill: #6a3d9a} \n
-          [site_type = 'FAMILY CAMPGROUND'] {marker-fill: #ffff99} \n
-          [site_type = 'ODSERVATION SITE'] {marker-fill: #a6cee3} \n
-          [site_type = 'ALPINE SKI AREA'] {marker-fill: #1f78b4} \n
-          [site_type = 'NORDIC AREA'] {marker-fill: #b2df8a} \n
-          [site_type = 'LODGE'] {marker-fill: #33a02c} \n
-          [site_type = 'GROUP CAMPGROUND'] {marker-fill: #fb9a99} \n
-          [site_type = 'CAMPING CUA'] {marker-fill: #e31a1c} \n
-          [site_type = 'SHELTER'] {marker-fill: #fdbf6f} \n
-          [site_type = 'TENTSITE'] {marker-fill: #ff7f00} \n
-          [site_type = 'FIRE LOOKOUT'] {marker-fill: #cab2d6} \n
-          [site_type = 'INTERP MAJOR'] {marker-fill: #6a3d9a} \n
-          [site_type = 'PICNIC AREA'] {marker-fill: #ffff99} \n
-          }"
+        "cartocss":"#layer { marker-height: 15; [site_type = 'AMC HUT'],[site_type = 'LODGE'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/building-18.svg); }  [site_type = 'ADMIN/INFO/INTERP'],[site_type = 'VISITOR /INFO CENTER'], [site_type = 'INFO/INTERP'], [site_type = 'INTERP MAJOR'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710160800information-15.svg); } [site_type = 'BOATING SITE'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710162204canoe.svg); } [site_type = 'CABIN'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/building-18.svg); marker-fill : #2171b5; } [site_type = 'TRAILHEAD'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710170609hiking.svg);} [site_type = 'OBSERVATION SITE'],[site_type = 'ODSERVATION SITE'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710162834observation.svg);} [site_type = 'FAMILY CAMPGROUND'],[site_type = 'CAMPING CUA'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/campsite-18.svg); } [site_type = 'ALPINE SKI AREA'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/skiing-18.svg); } [site_type = 'NORDIC AREA'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710164205nordic.svg); } [site_type = 'GROUP CAMPGROUND'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710163451groupcamp.svg); } [site_type = 'SHELTER'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710164913shelter-15.svg); } [site_type = 'TENTSITE'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710164921campsite-11.svg); } [site_type = 'FIRE LOOKOUT'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710165259firetower.svg); } [site_type = 'PICNIC AREA'] { marker-file : url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710165514picnic-site-15.svg); } }"
       },
-    "peaks_4000ft":
-      {
-        "sql":"SELECT * FROM peaks_4000ft",
-        "cartocss":"#layer { marker-fill: #000; marker-width: 5; }"
-      },
-    "firestations":
-      {
-        "sql":"SELECT * FROM firestations",
-        "cartocss":"#layer { marker-fill: #fb9a99; marker-width: 5; }"
-      }
+      "peaks_4000ft":
+        {
+          "sql":"SELECT * FROM peaks_4000ft",
+          "cartocss":"#layer { marker-fill: #000; marker-width: 5; }"
+        },
+      "firestations":
+        {
+          "sql":"SELECT * FROM firestations",
+          "cartocss":"#layer { marker-fill: #de2d26; marker-width: 5; }"
+        }
 }
