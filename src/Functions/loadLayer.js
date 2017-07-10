@@ -1,4 +1,5 @@
 import layers from '../layers';
+import createLegend from './createLegend';
 
 const loadLayer = (map) => {
   cartodb.createLayer(map, {
@@ -46,8 +47,9 @@ const loadLayer = (map) => {
   })
   .addTo(map)
   .on('done', function(layer) {
-    //TODO
-    console.log('layers loaded');
+    //add the legend to the map (leaflet method)
+    createLegend(map,layer);
+
     //add info window TODO get this to work
     // layer.setInteraction(true);
     // var sublayer = layer.getSubLayer(1);
