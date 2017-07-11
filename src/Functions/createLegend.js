@@ -12,24 +12,21 @@ const createLegend = (map,layer) => {
       "toggleId":"stands-toggle",
       "divId":"forest-stand-legend",
       "choroUnit":"&nbspyears",
-      "grades":[0, 51, 98, 130, 190],
-      "index": [0]
+      "grades":[0, 51, 98, 130, 190]
     },
     "TrailsPeaks": {
       "title":"Trails and Peaks",
       "toggleId":"trails-peaks-toggle",
       "divId":"trails-peaks-legend",
       "choroUnit":"",
-      "grades":[],
-      "index": [5,8]
+      "grades":[]
     },
     "POIs": {
       "title":"Recreation",
       "toggleId":"recreation-toggle",
       "divId":"recreation-legend",
       "choroUnit":"",
-      "grades":[],
-      "index": [7]
+      "grades":[]
     },
   };
 
@@ -57,15 +54,22 @@ const createLegend = (map,layer) => {
   legend.addTo(map);
 
   //set up event listeners to hide layers and their legends based on object contents
-  //TODO correct!
-  for (var key in legendObjects) {
-    $("#"+legendObjects[key].toggleId).click(() => {
-      $("#"+legendObjects[key].divId).toggle("slow");
-      for (var i = 0; i<legendObjects[key].index.length; i++) {
-        layer.getSubLayer(legendObjects[key].index(i)).toggle();
-      }
-    });
-  }
+  $("#stands-toggle").click(() => {
+    console.log("forest");
+    $("#forest-stand-legend").toggle("slow");
+    layer.getSubLayer(0).toggle();
+  });
+  $("#trails-peaks-toggle").click(() => {
+    console.log("trails");
+    $("#trails-peaks-legend").toggle("slow");
+    layer.getSubLayer(5).toggle();
+    layer.getSubLayer(8).toggle();
+  });
+  $("#recreation-toggle").click(() => {
+    console.log("recreation");
+    $("#recreation-legend").toggle("slow");
+    layer.getSubLayer(7).toggle();
+  });
 }
 
 export default createLegend;
