@@ -48,7 +48,7 @@ const loadLayer = (map) => {
   .addTo(map)
   .on('done', function(layer) {
     //add the legend to the map (leaflet method)
-    createLegend(map,layer);
+    //TODO createLegend(map,layer);
 
     //add info window TODO get this to work
     // layer.setInteraction(true);
