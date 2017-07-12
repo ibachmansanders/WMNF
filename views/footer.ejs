@@ -1,6 +1,21 @@
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
 <script src="/bundle.js" charset="utf-8"></script>
+<script type="infowindow/html" id="mountain_infowindow_template">
+    <div class="cartodb-popup v2">
+        <a href="#close" class="cartodb-popup-close-button close">x</a>
+
+        <div class="cartodb-popup-content-wrapper custom">
+            <div class="cartodb-popup-content">
+                <p><strong>Mountain: {{location}}</strong></p>
+                <p>Peak: {{peak}}</p>
+                <p>Elevation: {{elevation}}</p>
+            </div>
+        </div>
+        <div class="cartodb-popup-tip-container"></div>
+    </div>
+</script>
 </body>
 </html>

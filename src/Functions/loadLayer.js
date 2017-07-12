@@ -1,7 +1,10 @@
 import layers from '../layers';
 import createLegend from './createLegend';
+import layerToggle from '../Functions/layerToggle';
 
-const loadLayer = (map) => {
+var createdLayer;
+
+const loadLayer = (map, callback) => {
   cartodb.createLayer(map, {
     user_name: 'bachmansande',
     type: 'cartodb',
@@ -48,19 +51,21 @@ const loadLayer = (map) => {
   .addTo(map)
   .on('done', function(layer) {
     //add the legend to the map (leaflet method)
-    //TODO createLegend(map,layer);
+    createLegend(map,layer);
 
     //add info window TODO get this to work
-    // layer.setInteraction(true);
-    // var sublayer = layer.getSubLayer(1);
-    // sublayer.setInteractivity('RANGER_D_2')
-    // var i = new cdb.geo.ui.InfoBox({
-    //      type: 'tooltip',
-    //      layer: sublayer,
-    //      template: '<div class="cartodb-tooltip-content-wrapper">{{RANGER_D_2}}</div>',
-    //      position: 'bottom|right',
-    //    });
-    // document.body.append(i.render().el);
+    cartodb.vis.Vis.addInfowindow(map,layer.getSubLayer(8),['location','peak','elevation'], {
+			infowindowTemplate: $('#mountain_infowindow_template').html(),
+			templateType: 'mustache'
+		});
+
+    //deactivate unecessary layers
+    layer.getSubLayer(0).toggle(); //forest
+    layer.getSubLayer(4).toggle(); //streams
+    layer.getSubLayer(7).toggle(); //recreation sites
+
+    //activate layer toggling
+    layerToggle(layer);
   })
   .on('error', function(err) {
     console.log("some error occurred: " + err);

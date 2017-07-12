@@ -15,7 +15,7 @@ class App extends React.Component {
   componentDidMount() {
     // timers, listeners...
     //load the map
-    var map = loadMap();
+    loadMap();
 
     //set up sidebar toggling
     $("#menu-toggle").click(function(e) {

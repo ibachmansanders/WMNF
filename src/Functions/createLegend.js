@@ -1,4 +1,3 @@
-import getColor from './getColor';
 import legendItemGenerator from './legendItemGenerator';
 
 const createLegend = (map,layer) => {
@@ -13,21 +12,7 @@ const createLegend = (map,layer) => {
       "divId":"forest-stand-legend",
       "choroUnit":"&nbspyears",
       "grades":[0, 51, 98, 130, 190]
-    },
-    "TrailsPeaks": {
-      "title":"Trails and Peaks",
-      "toggleId":"trails-peaks-toggle",
-      "divId":"trails-peaks-legend",
-      "choroUnit":"",
-      "grades":[]
-    },
-    "POIs": {
-      "title":"Recreation",
-      "toggleId":"recreation-toggle",
-      "divId":"recreation-legend",
-      "choroUnit":"",
-      "grades":[]
-    },
+    }
   };
 
   legend.onAdd = function () {
@@ -53,23 +38,6 @@ const createLegend = (map,layer) => {
   //add the built legend to the map
   legend.addTo(map);
 
-  //set up event listeners to hide layers and their legends based on object contents
-  $("#stands-toggle").click(() => {
-    console.log("forest");
-    $("#forest-stand-legend").toggle("slow");
-    layer.getSubLayer(0).toggle();
-  });
-  $("#trails-peaks-toggle").click(() => {
-    console.log("trails");
-    $("#trails-peaks-legend").toggle("slow");
-    layer.getSubLayer(5).toggle();
-    layer.getSubLayer(8).toggle();
-  });
-  $("#recreation-toggle").click(() => {
-    console.log("recreation");
-    $("#recreation-legend").toggle("slow");
-    layer.getSubLayer(7).toggle();
-  });
 }
 
 export default createLegend;

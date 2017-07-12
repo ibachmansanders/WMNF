@@ -7,6 +7,7 @@ const getColor = (d,i) => {
            d > 51  ? '#bae4b3' :
                      '#edf8e9';
   } else if (i==2) {
+    //TODO use these conditionals for other visualizations            
     return d > 11.056659  ? '#252525' :
            d > 6.323420  ? '#636363' :
            d > 3.407805  ? '#969696' :

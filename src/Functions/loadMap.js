@@ -1,6 +1,7 @@
 import loadLayer from './loadLayer';
 
 const loadMap = () => {
+  //load map
   cartodb.createVis('map', 'https://ibachmansanders.carto.com/api/v2/viz/54d14bff-ad3a-41fe-b9c3-1c37c54ff26d/viz.json', {
     center_lat: 44.1,
     center_lon: -71.507,
@@ -13,9 +14,8 @@ const loadMap = () => {
       var map = vis.getNativeMap();
 
       //add layers to the map
-      var layers = loadLayer(map);
+      loadLayer(map);
 
-      return map;
     })
     .error(function(err) {
       console.log(err);
