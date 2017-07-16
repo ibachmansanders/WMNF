@@ -1,6 +1,9 @@
 import layers from '../layers';
 import createLegend from './createLegend';
-import layerToggle from '../Functions/layerToggle';
+import layerToggle from './layerToggle';
+import deactivateLayer from './deactivateLayer';
+import addInfowindow from './addInfowindow';
+import zoomToDistrict from './zoomToDistrict';
 
 var createdLayer;
 
@@ -9,6 +12,10 @@ const loadLayer = (map) => {
     user_name: 'bachmansande',
     type: 'cartodb',
     sublayers: [
+      {
+        sql: layers.district_boundary_83.sql,
+        cartocss: layers.district_boundary_83.cartocss
+      },
       {
         sql: layers.stands_fsvegattributes.sql,
         cartocss: layers.stands_fsvegattributes.cartocss
@@ -82,41 +89,38 @@ const loadLayer = (map) => {
         cartocss: layers.trail_head.cartocss
       },
       {
-        sql: layers.district_boundary_83.sql,
-        cartocss: layers.district_boundary_83.cartocss
+        sql: layers.district_boundary_androscoggin.sql,
+        cartocss: layers.district_boundary_androscoggin.cartocss
+      },
+      {
+        sql: layers.district_boundary_pemigewasset.sql,
+        cartocss: layers.district_boundary_pemigewasset.cartocss
+      },
+      {
+        sql: layers.district_boundary_saco.sql,
+        cartocss: layers.district_boundary_saco.cartocss
       }
     ]
   })
   .addTo(map)
   .on('done', function(layer) {
+    //set interaction of layer
+    layer.setInteraction(true);
+
+    //deactivate unecessary layers
+    deactivateLayer(layer);
+
     //add the legend to the map (leaflet method)
     createLegend(map,layer);
 
-    //add info windows
-    cartodb.vis.Vis.addInfowindow(map,layer.getSubLayer(16),['location','peak','elevation'], {
-			infowindowTemplate: $('#mountain_infowindow_template').html(),
-			templateType: 'mustache'
-    });
-    //iterate through recreation layers, adding infowindow
-    const layers = [2,3,4,5,6,7,8,9,10,11,13,14,15,17];
-    layers.map((index)=> {
-      console.log(index);
-      cartodb.vis.Vis.addInfowindow(map,layer.getSubLayer(index),['name','site_type'], {
-        infowindowTemplate: $('#recreation_infowindow_template').html(),
-        templateType: 'mustache'
-      });
-    });
-    
-
-    //deactivate unecessary layers
-    var layersOffIndex = [0,1,2,3,4,6,7,8,9,10,11,13,14,15,17];
-
-    for (var i = 0; i < layersOffIndex.length; i++) {
-      layer.getSubLayer(layersOffIndex[i]).toggle();
-    };
-
     //activate layer toggling
     layerToggle(layer);
+
+    //Add infowindow to layers
+    addInfowindow(layer, map);
+
+    //add zoom to district functionality
+    zoomToDistrict(layer, map);
   })
   .on('error', function(err) {
     console.log("some error occurred: " + err);

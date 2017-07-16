@@ -148,13 +148,32 @@ span.caret {
   line-height: 18px;
   color: #FFF;
   background-color: #222;
-  padding: 1vw;
-  border-radius: 1vw;
+  padding: 5px;
+  border-radius: 4px;
   -webkit-box-shadow: 0 0 5px 0 #A9A9A9;
   box-shadow: 0 0 5px 0 #A9A9A9;
+  max-width: 142 px;
   display: none; }
   .legend i {
     width: 18px;
     height: 18px;
     float: left;
     margin-right: 1vw; }
+
+/* district filter */
+#district-filter-wrapper {
+  position: absolute;
+  right: 0;
+  z-index: 110;
+  max-width: 142px;
+  border-radius: 4px;
+  background-color: #252525;
+  margin-right: 20px;
+  margin-top: 69px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 4px 2px;
+  overflow: hidden; }
+  #district-filter-wrapper button {
+    max-width: 142px;
+    font-size: 0.8em; }

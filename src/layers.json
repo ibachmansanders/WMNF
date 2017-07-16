@@ -92,6 +92,21 @@
   "district_boundary_83":
     {
       "sql":"SELECT * FROM district_boundary_83",
-      "cartocss":"#layer { line-color: #fec44f; }"
+      "cartocss":"#layer { line-color: #666; line-width: 2px; }"
+    },
+  "district_boundary_saco":
+    {
+      "sql":"SELECT * FROM district_boundary_83 WHERE dist_name = 'Saco'",
+      "cartocss":"#layer { line-color: #666; line-width: 2px; polygon-fill: #FFF; opacity: 0.5; }"
+    },
+  "district_boundary_androscoggin":
+    {
+      "sql":"SELECT * FROM district_boundary_83 WHERE dist_name = 'Androscoggin'",
+      "cartocss":"#layer { line-color: #666; line-width: 2px; polygon-fill: #FFF; opacity: 0.5; }"
+    },
+  "district_boundary_pemigewasset":
+    {
+      "sql":"SELECT * FROM district_boundary_83 WHERE dist_name = 'Pemigewasset'",
+      "cartocss":"#layer { line-color: #666; line-width: 2px; polygon-fill: #FFF; opacity: 0.5; }"
     }
 }

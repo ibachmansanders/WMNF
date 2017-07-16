@@ -1,4 +1,6 @@
 import React from 'react';
+
+//import loadmap function to trigger carto methods
 import loadMap from '../Functions/loadMap';
 
 //import Header component
@@ -7,6 +9,8 @@ import Header from './Header';
 import Map from './Map';
 //import Sidebar component
 import Sidebar from './Sidebar';
+//import district filter component
+import DistrictFilter from './DistrictFilter';
 
 class App extends React.Component {
   state = {
@@ -30,6 +34,7 @@ class App extends React.Component {
     return (
       <div id="wrapper" className="App active">
         <Sidebar />
+        <DistrictFilter />
         <Map id="map" />
       </div>
     );
