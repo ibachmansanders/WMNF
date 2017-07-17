@@ -104,6 +104,7 @@ const loadLayer = (map) => {
   })
   .addTo(map)
   .on('done', function(layer) {
+
     //set interaction of layer
     layer.setInteraction(true);
 

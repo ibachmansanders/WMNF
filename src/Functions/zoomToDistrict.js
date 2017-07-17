@@ -1,17 +1,3 @@
-//Use NFPA as an example to get you  going- setSQL, setBounds?
-//set map bounds based on returned data TODO config for this map
-// function setBounds(map) {
-// 	var sqlCall = new cartodb.SQL({user:'clientdemos'});
-// 	var sql = "SELECT * FROM" + sqlSource + " WHERE nfpa.state != ''" + yearSQL + stateSQL + "(" + stateSQLin + ")" + typeSQL + propertySQL + ageSQL + genderSQL + deathSQL + injurySQL;
-// 	var corner1;
-// 	var corner2;
-// 	sqlCall.getBounds(sql).done(function(bounds) {
-// 		map.fitBounds(bounds, {
-// 			paddingBottomRight: [500,0]
-// 		});
-// 	});
-// }
-
 //toggle highlighting on mouseover for district filters
 const toggleLayer = [
     {

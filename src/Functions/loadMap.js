@@ -1,4 +1,5 @@
 import loadLayer from './loadLayer';
+import geocoder from './geocoder';
 
 const loadMap = () => {
   //load map
@@ -6,15 +7,22 @@ const loadMap = () => {
     center_lat: 44.1,
     center_lon: -71.507,
     zoom: 10,
-    shareable: false
+    shareable: false,
+    search: false
   })
     .done(function(vis) {
 
       //make map accessible to mess with
       var map = vis.getNativeMap();
 
+      //make map globally accessible
+      masterMap = vis.getNativeMap();
+
       //add layers to the map
       loadLayer(map);
+
+      //add geocoder to the map
+      geocoder(map);
 
     })
     .error(function(err) {
