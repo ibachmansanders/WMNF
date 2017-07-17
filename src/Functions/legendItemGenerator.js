@@ -2,7 +2,6 @@ import getColor from './getColor';
 
 //NOTE unit and grades are optional paramters
 const legendItemGenerator = (legendContent,title,toggleId,divId,choroUnit,grades) => {
-  console.log("title: "+title);
   //container for FOREST STANDS
   legendContent += '<div class="col-sm-12">';
   //add title and toggle interaction

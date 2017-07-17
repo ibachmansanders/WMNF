@@ -203,9 +203,9 @@ span.caret {
   background-color: #252525;
   margin-right: 10px;
   margin-top: 69px;
-  -webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
-  -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
-  box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  -webkit-box-shadow: rgba(0,0,0,.1) 0 0 4px 2px;
+  -moz-box-shadow: rgba(0,0,0,.1) 0 0 4px 2px;
+  box-shadow: rgba(0,0,0,.1) 0 0 4px 2px;
   overflow: hidden;
     button {
       width: 100%;
@@ -222,4 +222,46 @@ span.caret {
       padding-bottom: 15px;
       margin: 0;
     }
+}
+
+/* leaflet draw control */
+.leaflet-left .leaflet-control {
+  margin-left: 68px !important;
+  margin-top: 20px;
+  border: 1px solid #999;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  .leaflet-draw-draw-marker {
+
+  }
+}
+
+/* required for modal popup */
+#modal {
+  background-color: #FFF;
+  border-radius: 4px;
+  position: absolute;
+  margin-left: 20vw;
+  margin-top: 20vh;
+  display: none;
+  z-index: 110;
+  padding: 20px;
+  border: 1px solid #999;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  #submit {
+    float: left;
+    background-color: #4cae4c;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  #close {
+    float: right;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }

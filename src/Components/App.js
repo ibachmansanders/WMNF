@@ -35,6 +35,7 @@ class App extends React.Component {
       <div id="wrapper" className="App active">
         <Sidebar />
         <DistrictFilter />
+        <div id="modal"></div>
         <Map id="map" />
       </div>
     );
@@ -42,6 +43,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-//TODO you could use this, or it's hear as a model:
-//<Header message={this.state.pageHeader} />

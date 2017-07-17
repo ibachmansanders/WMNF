@@ -10,6 +10,11 @@ const layers = [
         interactivityArray: ['acres','ev_name', 'stand_age']
     },
     {
+        index: 2,
+        interactivity: 'name, telephone, address,city,zip,directions,naicsdescr',
+        interactivityArray: ['name','telephone','address','city','zip','directions','naicsdescr']
+    },
+    {
         index: 13,
         interactivity: 'name,mi_length',
         interactivityArray: ['name','mi_length']
