@@ -178,9 +178,13 @@ span.caret {
   #district-filter-wrapper button {
     width: 100%;
     font-size: 0.8em;
-    border-color: #4cae4c; }
+    border-color: #4cae4c;
+    background-color: #252525; }
   #district-filter-wrapper h2 {
     font-size: 1.25em;
     color: #FFF;
     text-align: center;
-    padding: auto; }
+    background-color: #4cae4c;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0; }

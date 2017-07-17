@@ -55,7 +55,7 @@ class DistrictFilter extends Component {
   render() {
     return(
       <div id="district-filter-wrapper">
-        <h2 id="district-title">Selected Districts</h2>
+        <h2 id="district-title">Districts</h2>
         <Button id="androscoggin" bsStyle="success" onClick={ ()=> this.setState({ androscoggin: !this.state.androscoggin })}>Androscoggin District</Button>
         <Button id="pemigewasset" bsStyle="success" onClick={ ()=> this.setState({ pemigewasset: !this.state.pemigewasset })}>Pemigewasset District</Button>
         <Button id="saco" bsStyle="success" onClick={ ()=> this.setState({ saco: !this.state.saco })}>Saco District</Button>
