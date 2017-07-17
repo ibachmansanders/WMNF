@@ -7,57 +7,57 @@
   "firestations":
     {
       "sql":"SELECT * FROM firestations",
-      "cartocss":"#layer { marker-fill: #e41a1c; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/fire-station-18.svg); }"
+      "cartocss":"#layer { marker-fill: #e41a1c; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/fire-station-18.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "firetowers":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'FIRE LOOKOUT'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710165259firetower.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710165259firetower.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "picnic":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'PICNIC AREA'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710165514picnic-site-15.svg) }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710165514picnic-site-15.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "observation":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type IN ('OBSERVATION SITE','ODSERVATION SITE')",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710162834observation.svg) }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710162834observation.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "admin_info":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type IN ('VISITOR /INFO CENTER','INFO/INTERP','INTERP MAJOR','ADMIN/INFO/INTERP')",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710160800information-15.svg) }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710160800information-15.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "group_camping":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'GROUP CAMPGROUND'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712142832groupcamp.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712142832groupcamp.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "family_camping":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'FAMILY CAMPGROUND'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/campsite-18.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/campsite-18.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "lodge":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'LODGE'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/town-18.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/town-18.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "alpine":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'ALPINE SKI AREA'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/skiing-18.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/skiing-18.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "nordic":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'NORDIC AREA'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712143226nordic.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712143226nordic.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "boating":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'BOATING SITE'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712142826canoe.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712142826canoe.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "hiking_trails_83":
     {
@@ -67,32 +67,32 @@
   "shelter":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'SHELTER'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710164913shelter-15.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710164913shelter-15.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "amc_hut":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'AMC HUT'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/building-18.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/building-18.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "tent_site":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'TENTSITE'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/triangle-stroked-18.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/triangle-stroked-18.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "peaks_4000ft":
     {
       "sql":"SELECT * FROM peaks_4000ft",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710172003mountain-15.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170710172003mountain-15.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "trail_head":
     {
       "sql":"SELECT * FROM recreation_sites_current_83 WHERE site_type = 'TRAILHEAD'",
-      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712142851hiking.svg); }"
+      "cartocss":"#layer { marker-fill: #444; marker-file: url(https://s3.amazonaws.com/com.cartodb.users-assets.production/production/bachmansande/assets/20170712142851hiking.svg); [zoom >= 12] {marker-height: 25px; } [zoom >= 13] {marker-height: 30px} [zoom >= 14] {marker-height: 35px} }"
     },
   "district_boundary_83":
     {
       "sql":"SELECT * FROM district_boundary_83",
-      "cartocss":"#layer { line-color: #666; line-width: 2px; line-opacity: 0.5; [zoom >= 13] {line-dasharray: 6,10; line-opacity: 1;} } #layer::labels {[zoom >= 13] {text-name: [dist_name]; text-face-name: 'Open Sans Semibold'; text-size: 14; text-label-position-tolerance: 10; text-fill: #666; text-halo-fill: #FFF; text-halo-radius: 1; text-dy: -10; text-allow-overlap: true; text-placement: line;}}"
+      "cartocss":"#layer { polygon-fill: #FFF; opacity: 0.1; line-color: #666; line-width: 2px; line-opacity: 0.5; [zoom >= 13] {line-dasharray: 6,10; line-opacity: 1;} } #layer::labels {[zoom >= 13] {text-name: [dist_name]; text-face-name: 'Open Sans Semibold'; text-size: 14; text-label-position-tolerance: 10; text-fill: #666; text-halo-fill: #FFF; text-halo-radius: 1; text-dy: -10; text-allow-overlap: true; text-placement: line;}}"
     },
   "district_boundary_saco":
     {

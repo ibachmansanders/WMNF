@@ -179,3 +179,8 @@ span.caret {
     width: 100%;
     font-size: 0.8em;
     border-color: #4cae4c; }
+  #district-filter-wrapper h2 {
+    font-size: 1.25em;
+    color: #FFF;
+    text-align: center;
+    padding: auto; }

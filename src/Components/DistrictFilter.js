@@ -7,15 +7,15 @@ class DistrictFilter extends Component {
   constructor(...args) {
     super(...args);
     this.state = {
-      saco: true,
-      androscoggin: true,
-      pemigewasset: true
+      saco: false,
+      androscoggin: false,
+      pemigewasset: false
     };
   }
   componentDidUpdate() {
     //create bounds object to store bounds data and update map
     var boundsSQL = "SELECT * FROM district_boundary_83 WHERE dist_name IN (";
-    var inSQL = ["'Androscoggin'","'Pemigewasset'","'Saco'"];
+    var inSQL = ["'a'","'p'","'s'"];
     var endSQL = ")";
 
     //detect state  and toggle css
@@ -55,6 +55,7 @@ class DistrictFilter extends Component {
   render() {
     return(
       <div id="district-filter-wrapper">
+        <h2 id="district-title">Selected Districts</h2>
         <Button id="androscoggin" bsStyle="success" onClick={ ()=> this.setState({ androscoggin: !this.state.androscoggin })}>Androscoggin District</Button>
         <Button id="pemigewasset" bsStyle="success" onClick={ ()=> this.setState({ pemigewasset: !this.state.pemigewasset })}>Pemigewasset District</Button>
         <Button id="saco" bsStyle="success" onClick={ ()=> this.setState({ saco: !this.state.saco })}>Saco District</Button>
