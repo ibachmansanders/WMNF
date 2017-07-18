@@ -35,7 +35,6 @@ class App extends React.Component {
       <div id="wrapper" className="App active">
         <Sidebar />
         <DistrictFilter />
-        <div id="modal"></div>
         <Map id="map" />
       </div>
     );

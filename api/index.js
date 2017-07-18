@@ -1,4 +1,12 @@
 import express from 'express';
+//import jQuery
+import {$, jQuery} from 'jquery';
+import Window from 'window';
+
+//assign jQuery to a virtual window so that it can be used
+const window = new Window();
+window.$ = $;
+window.jQuery = jQuery;
 
 //router object, like a server, will control .get calls
 const router = express.Router();
@@ -9,10 +17,36 @@ router.get('/', (req, res) => {
 });
 
 //create an API endpoint to process user  input
-router.post('/', (req, res) => {
-  //read the body of the request, post to main body of page
+router.post('/data', (req, res) => {
+  console.log(req.body);
+  //assign body to a variable
+  var sqlVar = req.body.sql;
 
-  //express will deliver a JSON object from the webpage, and we need to parse it
+  //TODO hide this using DOTENV npm
+  var apiKey = 'XXXX';
+  
+  //TODO validate the sql!
+
+  var queryURL = 'https://bachmansande.carto.com/api/v2/sql?q=' + sqlVar + '&api_key=' + apiKey;
+
+  //TEST
+  console.log(queryURL);
+
+  //AJAX function here to send to carto!
+  //send queryURL TODO finish
+  $.ajax({
+    type: 'POST',
+    contentType: application/JSON,
+    url: queryURL,
+    success: (response)=>{
+      console.log('success');
+      console.log(JSON.stringify(response));
+    },
+    error: (xhr, status, error) => {
+            alert ("Server error: " + error);
+    }
+  });
+
 });
 
 export default router;

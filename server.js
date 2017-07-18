@@ -2,6 +2,11 @@
 import config from './config'; //server config files
 import apiRouter from './api'; //component in which I'll store api setup
 
+//create body parser to interpret out-going data
+import bodyParser from 'body-parser';
+var jsonParser = bodyParser.json();
+
+
 //set up Sass Dependencies for SCSS
 import sassMiddleware from 'node-sass-middleware';
 import path from 'path'; //helps find the Sass files
@@ -25,10 +30,16 @@ server.get('/', (req, res) => {
   res.render('index', {
     content: '...app initialization...'
   });
+  //TODO express static to build website w/out sending the public folder, possibly making it more secure
+  //res.sendStatic('index');
 });
 
-//find api config file
+//assign body-parser to handle post request
+server.use(jsonParser);
+
+//find api config file --intercepts anything coming my way via url /api
 server.use('/api', apiRouter);
+
 //send finished web content to the public dir
 server.use(express.static('public'));
 
