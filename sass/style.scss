@@ -241,14 +241,15 @@ span.caret {
     background-color: #FFF;
     width: 130px;
     border-radius:  4px;
-    .leaflet-draw-toolbar p{
+    .leaflet-draw-toolbar p, #locator-text{
       font-weight: bolder;
       float: right;
       padding: 5px 10px 0 0;
       margin-bottom: 0;
     }
-    .leaflet-draw-draw-marker {
+    .leaflet-draw-draw-marker, .leaflet-bar-part {
       float: left;
+      margin-right: 0;
       border-radius: 4px;
     }
   }

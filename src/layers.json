@@ -92,7 +92,7 @@
   "district_boundary_83":
     {
       "sql":"SELECT * FROM district_boundary_83",
-      "cartocss":"#layer { polygon-fill: rgba(255,255,255,0.1); line-color: #666; line-width: 2px; line-opacity: 0.5; [zoom >= 13] {line-dasharray: 6,10; line-opacity: 1;} } #layer::labels {[zoom >= 13] {text-name: [dist_name]; text-face-name: 'Open Sans Semibold'; text-size: 14; text-label-position-tolerance: 10; text-fill: #666; text-halo-fill: #FFF; text-halo-radius: 1; text-dy: -10; text-allow-overlap: true; text-placement: line;}}"
+      "cartocss":"#layer { line-color: #666; line-width: 2px; line-opacity: 0.5; [zoom >= 13] {line-dasharray: 6,10; line-opacity: 1;} } #layer::labels {[zoom >= 13] {text-name: [dist_name]; text-face-name: 'Open Sans Semibold'; text-size: 14; text-label-position-tolerance: 10; text-fill: #666; text-halo-fill: #FFF; text-halo-radius: 1; text-dy: -10; text-allow-overlap: true; text-placement: line;}}"
     },
   "district_boundary_saco":
     {

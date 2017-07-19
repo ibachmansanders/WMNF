@@ -206,13 +206,14 @@ span.caret {
     background-color: #FFF;
     width: 130px;
     border-radius: 4px; }
-    .leaflet-left .leaflet-control .leaflet-draw-toolbar p {
+    .leaflet-left .leaflet-control .leaflet-draw-toolbar p, .leaflet-left .leaflet-control #locator-text {
       font-weight: bolder;
       float: right;
       padding: 5px 10px 0 0;
       margin-bottom: 0; }
-    .leaflet-left .leaflet-control .leaflet-draw-draw-marker {
+    .leaflet-left .leaflet-control .leaflet-draw-draw-marker, .leaflet-left .leaflet-control .leaflet-bar-part {
       float: left;
+      margin-right: 0;
       border-radius: 4px; }
 
 /* modal popup */

@@ -1,6 +1,7 @@
 import loadLayer from './loadLayer';
 import geocoder from './geocoder';
 import leafletDrawer from './leafletDrawer';
+import geolocator from './geolocator';
 
 
 const loadMap = () => {
@@ -28,6 +29,9 @@ const loadMap = () => {
 
       //add marker drawer to map
       leafletDrawer(map);
+
+      //add geolocator to map
+      geolocator(map);
 
     })
     .error(function(err) {

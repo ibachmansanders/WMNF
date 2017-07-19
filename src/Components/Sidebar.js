@@ -12,7 +12,7 @@ class Sidebar extends Component {
       openLodging: false,
       openAmenities: false,
       openSafety: false,
-      openNatural: true
+      openNatural: false
     };
   }
   render() {

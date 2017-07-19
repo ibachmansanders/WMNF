@@ -17,25 +17,25 @@ const Modal = (d,i) => {
     <legend>I am Reporting:</legend> \
     <div class="form-check"> \
       <label class="form-check-label"> \
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked> \
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="Injured Wildlife" checked> \
         Injured wildlife \
       </label> \
     </div> \
     <div class="form-check"> \
     <label class="form-check-label"> \
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"> \
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="Damage to infrastructure"> \
         Damage to infrastructure \
       </label> \
     </div> \
     <div class="form-check"> \
     <label class="form-check-label"> \
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3"> \
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="Wildfire"> \
         Wildfire \
       </label> \
     </div> \
     <div class="form-check"> \
     <label class="form-check-label"> \
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="option4"> \
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="Other"> \
         Other \
       </label> \
     </div> \

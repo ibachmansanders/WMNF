@@ -1,4 +1,10 @@
-import Modal from './Modal';
+import Modal from './modal';
+import submitForm from './submitForm';
+import WMNFMarker from '../Components/WMNFMarker';
+
+//import the custom marker factory
+var customMarker = WMNFMarker();
+
 const leafletDrawer = (map) => {// Create variable for Leaflet.draw features
     var drawnItems = new L.FeatureGroup();
 
@@ -11,13 +17,16 @@ const leafletDrawer = (map) => {// Create variable for Leaflet.draw features
         polygon : false,
         polyline : false,
         rectangle : false,
-        circle : false
+        circle : false,
+        marker: {
+            icon: new customMarker()
+        }
     },
     edit : false,
     remove: false
     });
     map.addControl(drawControl);
-    $(".leaflet-draw-toolbar").prepend("<p>Report an Issue</p>");
+    $(".leaflet-draw-toolbar").append("<p>Report an Issue</p>");
 
     //when the point drawer is used, created a new layer for the feature, add it to the drawnItems featureGroup
     map.on('draw:created', (e) => {
@@ -51,50 +60,3 @@ const leafletDrawer = (map) => {// Create variable for Leaflet.draw features
 }
 
 export default leafletDrawer;
-
-//TODO moduleize
-const submitForm = (drawnItems) => {
-    //retrieve form content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var comments = $("#comments").val();
-    var type = $("input[name=optionsRadios]:checked").val();
-
-    //set up SQL
-    drawnItems.eachLayer((layer)=> {
-        var sql = "INSERT INTO events_collector (the_geom, name, email, comments, type, latitude, longitude) VALUES (ST_SetSRID(ST_GeomFromGeoJSON('";
-        var coord = layer.getLatLng();
-        var sql2 = "{'type':'Point','coordinates':[" + coord.lng + "," + coord.lat + "]}'),4326),'" + name + "','" + email + "','" + comments + "','" + type + "','" + coord.lat + "','" + coord.lng +"')";
-        var masterSQL = sql + sql2;
-        //send SQL to server via sendData function
-        sendData(masterSQL);
-    });
-
-    //clean up
-    drawnItems.eachLayer((layer)=>{
-        drawnItems.removeLayer(layer);
-    });
-    $("#modal").toggle();
-    document.getElementById("modal-form").reset();
-}
-
-//TODO Moduleize
-const sendData = (sql) => {
-    //build SQL into JSON object
-    var data = { "sql" : sql };
-    //TODO
-    console.log(sql);
-    console.log(data);
-    //AJAX post (to api/index )
-    $.ajax({
-        url: './api/data',
-        type: 'POST',
-        data: data,
-        success: (response) => {
-            console.log(response);
-        },
-        error: (xhr, status, error) => {
-            alert ("error: " + error);
-        }
-    });
-}

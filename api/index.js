@@ -1,12 +1,6 @@
 import express from 'express';
-//import jQuery
-import {$, jQuery} from 'jquery';
-import Window from 'window';
-
-//assign jQuery to a virtual window so that it can be used
-const window = new Window();
-window.$ = $;
-window.jQuery = jQuery;
+//import to send the request to Carto
+import request from 'request';
 
 //router object, like a server, will control .get calls
 const router = express.Router();
@@ -17,33 +11,32 @@ router.get('/', (req, res) => {
 });
 
 //create an API endpoint to process user  input
-router.post('/data', (req, res) => {
-  console.log(req.body);
+router.post('/', (req, res) => {
+  console.log("Request body: " + JSON.stringify(req.body));
+  
   //assign body to a variable
   var sqlVar = req.body.sql;
 
   //TODO hide this using DOTENV npm
-  var apiKey = 'XXXX';
+  var apiKey = '90cfcd1535f3ac3368b7529f09ca8561d25a9faf';
   
   //TODO validate the sql!
 
-  var queryURL = 'https://bachmansande.carto.com/api/v2/sql?q=' + sqlVar + '&api_key=' + apiKey;
-
-  //TEST
+  var queryURL = 'https://bachmansande.carto.com/api/v2/sql?q=' + sqlVar + "&api_key=" + apiKey;
   console.log(queryURL);
 
-  //AJAX function here to send to carto!
-  //send queryURL TODO finish
-  $.ajax({
-    type: 'POST',
-    contentType: application/JSON,
+
+  //use npm Request to send request to carto
+  var options = {
+    method: "POST",
     url: queryURL,
-    success: (response)=>{
-      console.log('success');
-      console.log(JSON.stringify(response));
-    },
-    error: (xhr, status, error) => {
-            alert ("Server error: " + error);
+  };
+  request(options, function (error, response, body) {
+    if (response.statusCode == 200) {
+      res.send({success:true,content:body});
+    } else {
+      res.send({success:false,content:'server error: ' + response.statusCode});
+      console.log(body);
     }
   });
 
