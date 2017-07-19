@@ -203,9 +203,9 @@ span.caret {
   background-color: #252525;
   margin-right: 10px;
   margin-top: 69px;
-  -webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
-  -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
-  box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  -webkit-box-shadow: rgba(0,0,0,.1) 0 0 4px 2px;
+  -moz-box-shadow: rgba(0,0,0,.1) 0 0 4px 2px;
+  box-shadow: rgba(0,0,0,.1) 0 0 4px 2px;
   overflow: hidden;
     button {
       width: 100%;
@@ -223,3 +223,73 @@ span.caret {
       margin: 0;
     }
 }
+
+/* leaflet draw control */
+.leaflet-left {
+  left: 100% !important;
+  transform: translateX(-160%);
+  top: 261px;
+  margin-right: 100px !important;
+  .leaflet-control {
+    margin-right: 0px !important;
+    margin-top: 20px;
+    float: right;
+    border: 1px solid #999;
+    -webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+    -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+    box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+    background-color: #FFF;
+    width: 130px;
+    border-radius:  4px;
+    .leaflet-draw-toolbar p, #locator-text{
+      font-weight: bolder;
+      float: right;
+      padding: 5px 10px 0 0;
+      margin-bottom: 0;
+    }
+    .leaflet-draw-draw-marker, .leaflet-bar-part {
+      float: left;
+      margin-right: 0;
+      border-radius: 4px;
+    }
+  }
+}
+
+/* modal popup */
+#modal {
+  background-color: #FFF;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  z-index: 110;
+  padding: 20px;
+  border: 1px solid #999;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  box-shadow: rgba(0,0,0,.2) 0 0 4px 2px;
+  #submit {
+    float: left;
+    background-color: #4cae4c;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  #close {
+    float: right;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+  @media only screen and (max-width: 500px) {
+    #modal {
+      left: 100%;
+      transform: translate(-100%,-50%);
+      width: 80%;
+      float: right;
+    }
+  }

@@ -102,7 +102,7 @@ const layerInfo = [
 
 const layerToggle = (layer) => {
     //set the active layers
-    $("#1-2,#1-3,#6-1,#4-3").css("background-color","rgba(116,196,118,1)");
+    $("#1-1,#1-2,#1-3").css("background-color","rgba(116,196,118,1)");
 
     //activate layer toggles using layerInfo object
     layerInfo.map((item)=> {
