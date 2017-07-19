@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
   var sqlVar = req.body.sql;
 
   //TODO hide this using DOTENV npm
-  var apiKey = '90cfcd1535f3ac3368b7529f09ca8561d25a9faf';
+  var apiKey = 'xxxx';
   
   //TODO validate the sql!
 
